@@ -62,6 +62,22 @@ class PublicationTests(unittest.TestCase):
         record['independent_review']['reviewer'] = 'builder'
         self.assertIn('independent reviewer must differ from implementer', publication_errors(record, COMMIT))
 
+    def test_self_review_with_surrounding_whitespace_denied(self):
+        for implementer, reviewer in [('builder', 'builder '), (' builder', 'builder'),
+                                      ('\t builder \n', '\nbuilder\t')]:
+            with self.subTest(implementer=implementer, reviewer=reviewer):
+                record = evidence()
+                record['implementer'] = implementer
+                record['independent_review']['reviewer'] = reviewer
+                self.assertIn('independent reviewer must differ from implementer',
+                              publication_errors(record, COMMIT))
+
+    def test_distinct_reviewers_with_whitespace_accepted(self):
+        record = evidence()
+        record['implementer'] = ' builder '
+        record['independent_review']['reviewer'] = '\tverifier\n'
+        self.assertEqual([], publication_errors(record, COMMIT))
+
     def test_failed_and_stale_checks_denied(self):
         for field in ('local_validation', 'independent_review'):
             for change in ({'result': 'failed'}, {'candidate': OTHER}):
@@ -109,6 +125,16 @@ class PublicationTests(unittest.TestCase):
             command = [sys.executable, '-B', checker_path, str(receipt), '--repository', str(repository)]
             clean = subprocess.run(command, env=env, text=True, capture_output=True)
             self.assertEqual(0, clean.returncode, clean.stdout + clean.stderr)
+            git('config', 'status.showUntrackedFiles', 'no')
+            extra = repository / 'untracked.py'
+            extra.write_text('# Synthetic source absent from the candidate commit\n')
+            self.assertEqual('', git('status', '--porcelain'))
+            hidden = subprocess.run(command, env=env, text=True, capture_output=True)
+            self.assertEqual(1, hidden.returncode, hidden.stdout + hidden.stderr)
+            self.assertIn('candidate worktree is not clean', hidden.stdout)
+            extra.unlink()
+            clean_again = subprocess.run(command, env=env, text=True, capture_output=True)
+            self.assertEqual(0, clean_again.returncode, clean_again.stdout + clean_again.stderr)
             (repository / 'source.txt').write_text('changed\n')
             dirty = subprocess.run(command, env=env, text=True, capture_output=True)
             self.assertEqual(1, dirty.returncode)

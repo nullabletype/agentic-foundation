@@ -22,6 +22,8 @@ def publication_errors(record, commit):
     implementer = record.get('implementer')
     if not isinstance(implementer, str) or not implementer.strip():
         errors.append('implementer identity is missing')
+    else:
+        implementer = implementer.strip()
     for field in ('local_validation', 'independent_review'):
         evidence = record.get(field)
         if not isinstance(evidence, dict):
@@ -35,7 +37,7 @@ def publication_errors(record, commit):
                 errors.append(f'{field}.{key} is missing or invalid')
         if field == 'independent_review':
             reviewer = evidence.get('reviewer')
-            if not isinstance(reviewer, str) or not reviewer.strip() or reviewer == implementer:
+            if not isinstance(reviewer, str) or not reviewer.strip() or reviewer.strip() == implementer:
                 errors.append('independent reviewer must differ from implementer')
     impact = record.get('ui_ux')
     if type(impact) is not bool:
@@ -64,7 +66,7 @@ def main():
             return subprocess.check_output(['git', '-C', str(args.repository), *arguments], text=True).strip()
         commit = git('rev-parse', 'HEAD')
         errors = publication_errors(record, commit)
-        if git('status', '--porcelain'):
+        if git('status', '--porcelain', '--untracked-files=all'):
             errors.append('candidate worktree is not clean')
     except (OSError, ValueError, subprocess.CalledProcessError):
         parser.exit(1, 'publication blocked: unreadable record or Git state\n')
