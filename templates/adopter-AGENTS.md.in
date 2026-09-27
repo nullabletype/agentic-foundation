@@ -1,0 +1,15 @@
+# Project agent guidance
+
+Read [PROJECT.md](PROJECT.md) for the accepted scope, commands, budgets and authority. It is the active contract; files under `templates/` are examples. If the contract is draft, help complete it and continue safe discovery work, but do not infer publication permission.
+
+- Never introduce or continue using out-of-support libraries, projects, runtimes or tooling. Verify current upstream support for the selected version; unknown status blocks adoption. Follow [support policy](docs/support-policy.md).
+- Record the LikeC4 consideration and rationale before architecture readiness; follow [architecture decisions](docs/architecture.md).
+- Preserve unrelated work and use one writer per checkout.
+- Never capture the desktop, native windows, recordings or ambient screen context, including through helper commands. Use synthetic data, screenshot-free tests and human observation. Apply [controls](docs/controls.md) before any agent work.
+- Before staging or publishing, inspect all intended files and outgoing history for secrets, private personal data and local-only output. Resolve findings without echoing sensitive values; follow the pre-publication privacy check in [controls](docs/controls.md).
+- Generated outputs follow the configured paths and limits. Routine artifact uploads are disabled.
+- For implementation or resumption, follow [workflow](docs/workflow.md), the accepted task and its verification commands. Obtain verification from a different agent; missing review stays pending.
+- Human review of the actual local UI/UX result is required before branch push or PR creation/update. Verified non-UI publication follows the accepted contract. Merge, deploy and release need their separate authority.
+- Stop for material scope decisions or exhausted budgets. Use the [handoff](templates/handoff.md); restarting does not reset counters.
+
+For discovery, use the [brief](templates/brief.md). For independent verification, use the [review record](templates/independent-review.md) and an isolated environment without publication credentials or unrelated private data. Use exact commands from PROJECT.md; do not invent a check command from the foundation's tooling.

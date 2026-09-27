@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "candidate": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "contract_accepted": true,
+  "implementer": "synthetic-builder",
+  "ui_ux": true,
+  "local_validation": {
+    "candidate": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "result": "passed",
+    "command": "python3 -B verify.py",
+    "environment": "Illustrative isolated Linux fixture; replace with actual versions",
+    "evidence_ref": "local/check-record.md (illustrative; replace with actual record)"
+  },
+  "independent_review": {
+    "candidate": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "result": "passed",
+    "reviewer": "synthetic-verifier",
+    "evidence_ref": "local/review-record.md (illustrative; replace with actual record)"
+  },
+  "human_approval": {
+    "candidate": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "decision": "approved",
+    "reviewer": "synthetic-owner",
+    "flows": "Illustrative only; not an actual approval"
+  }
+}
