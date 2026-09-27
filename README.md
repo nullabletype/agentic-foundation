@@ -1,6 +1,6 @@
 # Agentic Foundation
 
-**Draft 0.1** — current version: [VERSION](VERSION). Prepared for initial publication; real-project validation remains pending. See [changes and versioning](CHANGELOG.md).
+**Draft 0.2** — current version: [VERSION](VERSION). Publication preflight fixes following draft 0.1; real-project validation remains pending. See [changes and versioning](CHANGELOG.md).
 
 A practical starting point for development with coding agents: discover the problem, test the flow, agree the architecture, then deliver through a bounded implementation and verification loop.
 
