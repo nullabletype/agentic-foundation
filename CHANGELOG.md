@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.2.0-draft.2 — 17 October 2026
+
+Unpublished draft; no evidence-schema or permission changes.
+
+- Optional manual delivery-agent evaluation pack, independent grading key, bounded aggregate record and reevaluation guidance. No executable agent runner or new required CI gate.
+- Explicit readiness admission separates scope acceptance and dependency integration from form completion, issue closure and board labels.
+- PR and independent-review templates map acceptance criteria to evidence or explicit gaps.
+- Adoption includes the evaluation guidance, template and synthetic cases without configuring tools or permissions.
+- Grader calibration v2 separates inputs from operator answers; historical grades from answer-exposed calibration are marked unvalidated. Records distinguish measured counts from unobserved boundaries and guidance comparisons require exact supplied inputs.
+
 ## 0.2.0-draft.1 — 27 September 2026
 
 Draft follow-up to 0.1; not a tagged or published release.

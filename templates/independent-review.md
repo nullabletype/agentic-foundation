@@ -8,6 +8,14 @@ Give this record to an agent that did not implement the candidate. Provide read-
 - Diff and relevant specification/decision links:
 - Commands independently run, environments and results:
 
+## Acceptance evidence
+
+Map criteria to observed evidence when they need separate proof. Include failed, pending and unavailable checks; a passing command is not proof of every criterion. One row is enough for a single outcome. Reuse sanitised references.
+
+| Acceptance criterion | Evidence reference, tested revision and result, or explicit gap |
+| --- | --- |
+| | |
+
 ## Findings
 
 Inspect the actual implementation and test behaviour. Try an important boundary/failure case; consider whether a plausible defect would escape the tests. Check the pre-publication privacy sweep and inspect intended files/outgoing history for overlooked sensitive content. Check scope, data exposure, implicit screenshotting, generated output and UI/UX classification. Verify commands against source/help. For architecture changes, check relevant ADRs and diagram consistency, and require the recorded LikeC4 consideration. For dependency/toolchain changes, verify current upstream support evidence against the selected versions; unsupported or unknown status blocks acceptance. Review the relevant controls rather than adding a new universal checklist.

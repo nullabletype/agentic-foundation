@@ -38,6 +38,14 @@ Use the [task template](../.github/ISSUE_TEMPLATE/task.md). Prefer end-to-end sl
 
 Split tasks when they require different decisions or rollback boundaries. Combine small changes when they share acceptance criteria and validation. Avoid both giant autonomous assignments and a separate ticket for every mechanical edit.
 
+### Readiness admission
+
+A submitted form is a proposal, not acceptance of its scope. Before first admission to the ready queue, record the owner's accepted outcome and the readiness decision. An accepted contract and previously agreed scope can supply that authority for routine repairs; do not request repeated approval for each mechanical step.
+
+Use one explicit dependency field in the task. A closed dependency is a signal to recheck readiness, not proof that its acceptance criteria passed or that the required change was integrated. Check the needed result and integration evidence before starting dependent work. Reopening a dependency, losing required evidence or adding a material open decision removes readiness until reassessed. A board column or label alone cannot override these conditions.
+
+Readiness automation is optional. If adopted, explicitly admit its tasks, preserve manual holds and unrelated work, use one canonical dependency field, reject missing/malformed references and cycles, and provide a read-only preview. Dependency transitions may maintain a previously accepted task; they cannot accept product scope or grant publication authority. Test reopening, malformed inputs and manual overrides before enabling writes. No particular tracker, label set or issue parser is required here.
+
 **Exit:** at least one task is ready, with dependencies satisfied and no unresolved decision that could change its implementation.
 
 ## 6. Execute one bounded loop
@@ -52,6 +60,8 @@ Split tasks when they require different decisions or rollback boundaries. Combin
 8. Report “ready for merge” only when required CI, independent review and human gates are satisfied. Merge and release use their separate authority. Close the task only after integration and any required post-merge checks.
 
 If the reviewer is unavailable, leave verification pending; do not silently self-approve. Non-UI PR publication can precede hosted-only checks, but never bypass locally runnable required checks. A failed hosted check cannot become a successful result through a rewritten summary.
+
+When several acceptance criteria need separate proof, map each to its evidence or explicit gap in the review/PR record. Reuse concise evidence references instead of copying logs. For material changes to agent instructions, templates or orchestration, assess whether the optional [agent-behaviour evaluation](agent-evaluation.md) is useful; a documentation gate does not measure agent behaviour.
 
 ## Stop and resume
 

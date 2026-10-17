@@ -18,6 +18,8 @@ This is a stack-neutral playbook and set of templates, informed by [dot-orbit an
 
 Use the [adoption command and verification tools](docs/automation.md) to preview a safe copy, run regression checks and test a bounded Linux verifier. The [completed example](examples/project-contract.md) and [pilot record](examples/pilot.md) show concrete limits and their evidence.
 
+For material agent-guidance changes, the optional [behaviour evaluation](docs/agent-evaluation.md) provides synthetic decision cases and independent grading without adding a runner or changing permissions.
+
 For established behaviour, maintenance or non-interactive work, reuse accepted decisions and choose the smallest relevant experiment; the full HTML discovery sequence is for new or uncertain user flows.
 
 Start small: one brief, one project contract and one ready task. Add records only when they preserve a decision or evidence someone needs. [Adoption](docs/adoption.md) explains what to copy, configure and prove.

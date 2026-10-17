@@ -21,6 +21,9 @@ REQUIRED = (
     "docs/automation.md", "docs/adopter-guide.md", "templates/adopter-AGENTS.md.in",
     "examples/project-contract.md", "examples/pilot.md",
     "examples/calibration/candidates.md", "examples/calibration/answer-key.md",
+    "docs/agent-evaluation.md", "templates/agent-evaluation.md",
+    "examples/agent-evaluation/cases.md", "examples/agent-evaluation/answer-key.md",
+    "examples/agent-evaluation/calibration-inputs.md",
 )
 IGNORED = {".git", ".agent-runs", "artifacts", "__pycache__", "node_modules"}
 LINK = re.compile(r"\[[^\]\n]+\]\(([^)\n]+)\)")
