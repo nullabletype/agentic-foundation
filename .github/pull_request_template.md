@@ -4,6 +4,12 @@ Link the task and describe the concrete behaviour or decision delivered. Use `Re
 
 ## Evidence
 
+Use this mapping when criteria need separate proof; include any pending or failed criterion. A single outcome can use one row. Reference sanitised evidence rather than reproducing logs.
+
+| Acceptance criterion | Evidence reference, tested revision and result, or explicit gap |
+| --- | --- |
+| | |
+
 - Base and candidate SHA:
 - Commands, environments and observed results:
 - Hosted checks/run URLs and tested SHA (pending until they run):
@@ -15,5 +21,6 @@ Link the task and describe the concrete behaviour or decision delivered. Use `Re
 - Artifact/generation impact and limits, or none:
 - Privacy/secret sweep scope, candidate revision, outcome and limitations:
 - Remaining risks and unavailable checks:
+- Agent-instruction/template/orchestration impact: evaluation reference and limits, or why reevaluation is unnecessary (see [evaluation guidance](../docs/agent-evaluation.md)):
 
 No desktop/native screenshots, recordings or raw private data. Record sanitised outcomes. A template entry does not enforce a gate; merge and release require their separate authority.

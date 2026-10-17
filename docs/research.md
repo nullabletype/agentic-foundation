@@ -13,6 +13,10 @@ Reviewed against primary sources on **27 September 2026**. These are dated engin
 | Anthropic, [Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) (9 January 2026) | Deterministic, model and human graders provide different signals. Model grading needs calibration; outcomes and actual system state matter alongside the transcript. | Combine executable checks, independent inspection and human judgement. An agent saying “done” is not evidence that acceptance criteria passed. |
 | Anthropic, [Scaling Managed Agents](https://www.anthropic.com/engineering/managed-agents) (8 April 2026) | Harness assumptions can become stale as model behaviour improves. Stable interfaces separate sessions, orchestration and execution environments. | Keep workflow policy separate from a particular agent vendor or runtime. Reassess workarounds instead of accumulating them indefinitely. |
 
+### Loop-evaluation follow-up — 17 October 2026
+
+Rechecked Anthropic's [evaluation guidance](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) and [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents) while reviewing the optional manual pack. The former distinguishes model-plus-harness identity, uncertain grading, repeated trials and actual outcomes; the latter supports adding complexity only when it improves measured results. Applied here: withhold calibration answers until verdicts are frozen, record exact supplied inputs and exposed configuration, distinguish unknown grading from an observed failure, and retain first-pass versus feedback-assisted outcomes separately. Using fresh held-out variants after coaching is our inference for checking transfer, not a requirement to build another suite. No additional runner, permissions or output retention is introduced. Agent-only calibration does not establish human agreement or runtime enforcement.
+
 ## Deliberate project choices
 
 The following rules come from the maintainer's requirements and experience with dot-orbit and dot-finance. They are **our policy choices**, not requirements attributed to the sources above:

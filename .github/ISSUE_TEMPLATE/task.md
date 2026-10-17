@@ -14,7 +14,8 @@ Who benefits, and what observable behaviour changes?
 - Dependency/toolchain support evidence for changes, or unchanged:
 - Acceptance scenarios, including relevant failure/recovery:
 - Non-goals:
-- Dependencies and readiness:
+- Dependencies (one authoritative list; record the required result and integration evidence, or none):
+- Open decisions that could materially change implementation, or none:
 
 ## Verification
 
@@ -27,4 +28,8 @@ Who benefits, and what observable behaviour changes?
 
 ## Ready decision
 
-No unresolved product or architecture decision can materially change this slice. Dependencies are satisfied. The task fits the accepted contract. Record the owner decision where needed; routine repairs inside agreed scope need no new ceremony.
+- Accepted scope reference (owner decision or existing agreement covering this task):
+- Readiness decision, owner/agent and date:
+- Dependency acceptance/integration evidence checked; manual holds and open decisions resolved:
+
+A complete form or closed dependency does not establish readiness. No unresolved product or architecture decision can materially change this slice. The task fits the accepted contract. Reassess readiness if a dependency reopens or its required evidence changes. Routine repairs inside agreed scope need no new ceremony; a label or board column grants no additional authority.

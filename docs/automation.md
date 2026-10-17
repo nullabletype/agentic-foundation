@@ -55,4 +55,8 @@ At first adoption, after a significant model change or after an escaped defect, 
 
 Use the [completed example contract](../examples/project-contract.md) and [pilot record](../examples/pilot.md) as evidence of what was exercised here. They grant no permissions to another project.
 
+## Evaluate agent behaviour
+
+The optional [evaluation procedure](agent-evaluation.md) and synthetic case pack test the delivery agent's decisions after material guidance changes. They complement reviewer calibration and tool tests. The manual pack requires no candidate execution, screenshots, network access or additional runtime. It does not run inside `scripts/verify.py`, launch agents automatically or configure a sandbox. Executable evaluations require the existing isolation and budget controls; a worktree is not an execution boundary.
+
 Sources: [Docker run isolation and constraints](https://docs.docker.com/engine/containers/run/), [official Python image](https://hub.docker.com/_/python), and [Python support status](https://devguide.python.org/versions/), checked 27 September 2026. The pinned image uses maintained Python 3.14.7 on Debian trixie. Recheck support and refresh the digest when updating the reference profile.

@@ -2,6 +2,39 @@
 
 Completed locally on 27 September 2026. This is a delivered foundation-tooling slice, not a production application trial or permission to publish another project.
 
+## Delivery-agent decision pack pilot — 17 October 2026
+
+The draft.2 follow-up exercised manual decision cases v1, with two fresh sessions given the five synthetic scenarios and applicable policy summaries. Neither candidate used tools or received the repository, operator key or previous trial responses. Input separation is operator-attested, not a technically verified sandbox. The supplied scenarios were condensed, so this is a pack sanity check, not a baseline of the full repository instructions or proof that changing them improved behaviour. Candidate sessions inherited the parent model; exact model configuration was not independently queried. Corrections were limited to one and active time to 15 minutes per trial. Active time was not measured for comparison.
+
+A separate read-only reviewer reported calibration against four known failing responses and one valid response, then graded the two candidate responses. Subsequent independent review found that calibration exposed the expected answers. Its reported zero false approvals/blocks is invalid as calibration evidence. The counts below preserve the historical reported grades, but are not validated agent-quality measurements; the later calibration repair does not retroactively validate them. No raw responses or transcripts were exported to files.
+
+| Cases | Completed / planned decisions | First-pass passes | Final criterion passes | Corrections | Scope violations | Unavailable / infrastructure failures |
+| --- | --- | --- | --- | --- | --- | --- |
+| A–E, two trials each (historical, unvalidated grading) | 10 / 10 | 6 / 10 | 10 / 10 | 4 case corrections | Not observed at execution boundary | 0 reported |
+
+Both sessions initially omitted recording the readiness decision in B and inspecting proposed tests for implicit capture in C. The independent grader rejected those four responses. One feedback round per session corrected B and C; all other responses stayed unchanged. The four first-pass failures remain in the aggregate. Historical reported final verdict: both trials pass all criteria after correction; the calibration defect prevents relying on this as validated acceptance.
+
+Evidence: reviewer session `implementation_review` against base `b76ed6da761a0a8f339634b5f5331427de826f3c`; implementation manifest `17612a621f79d1e375a79840de5c538241bc3ceab91110ae648a427fe6d7569f` covers the 14 implementation files before this receipt, excluding the earlier Orbit report. The manifest hashes sorted lines of repository-relative path, space, SHA-256 of file bytes and newline. Candidate sessions were `decision_trial_1` and `decision_trial_2`; the reviewer did not implement the changes.
+
+Decision: retain the manual pack as a starting point, and repair calibration before relying on new grades. This pilot does not exercise commands, actual publication, tool denial, automated readiness transitions or a complete agent execution sandbox. Privacy and isolation mechanisms were not changed. The documentation/regression gate and adoption tests passed independently; hosted CI and remote settings were not checked.
+
+### Calibration repair v2 — 17 October 2026
+
+Operator `root` supplied the exact standalone calibration-inputs v2 text to fresh session `blind_calibration_v2`, with no previous context, repository input, expected verdicts or pilot receipt. No tools were used. Separation is operator-attested; tool capabilities were not independently revoked. The six verdicts were frozen before the operator and separate reviewer `calibration_fix_review` compared them with the withheld key. The grader was never shown the key. This is one agent-only calibration run, not a candidate-performance baseline or evidence of human grading agreement.
+
+| Measure | Independently checked result |
+| --- | --- |
+| Completed / planned calibration items | 6 / 6 |
+| Verdict and substantive reason agreement | 6 / 6 |
+| False approvals / invalid controls | 0 / 3 |
+| Unnecessary blocks / valid controls | 0 / 3 |
+| Unknown verdicts | 0 / 6; unknown-handling was not exercised |
+| Corrections | 0; declared limit 0 |
+
+Input SHA-256: `436eb4e8a3d042b19b81501cb0b04cc32206ce6e342f0e3932caa7e2870f7aa5`. Operator key SHA-256: `90bd932a1a4bef2eb0dc4150ee358a6f3f6abdb9c2518befd3c7f551c6d88b66`. These identify the authored inputs and expected results; no raw grader response was exported. The grader inherited the parent session's model and harness; exact identifiers were unavailable, so no model/configuration comparison is claimed. Operator UTC observations from setup to frozen verdicts were 18:46:58–18:47:29 (31 seconds wall time); active time was not measured. The declared wall limit was 15 minutes.
+
+The operator-owned aggregate record used a 16 KiB ceiling outside version control and was removed after this sanitised receipt was recorded. No routine artifacts or new retention allowance were introduced. Decision: the separated fixed-example procedure passed this sanity check; use fresh held-out examples if tuning the grader. This does not retroactively validate the earlier delivery-case scores, establish general grader reliability or verify runtime isolation. Human agreement remains unverified. Independent source review and the foundation gate passed; no hosted checks were run.
+
 ## Observed results
 
 | Requirement | Repeatable evidence | Result |
