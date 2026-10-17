@@ -23,10 +23,6 @@ Use `python3 scripts/verify.py` for this repository's local documentation and re
 
 ## Where to look
 
-- Adopting this foundation: [adoption](docs/adoption.md) and [project contract](templates/project-contract.md).
-- Product discovery or a disposable HTML experiment: [brief](templates/brief.md).
-- Resuming or handing off work: [handoff](templates/handoff.md).
-- Reviewing implementation: [independent review](templates/independent-review.md).
-- Changing rationale or attribution: [project review](docs/project-review.md), [research](docs/research.md), [credits](CREDITS.md).
+Use the [task routing table](docs/task-routing.md) to select additional reading. It keeps discovery, evaluation and historical material out of routine delivery while preserving the safety and authority rules above.
 
 For adoption tooling, isolated verification or publication preflight changes, read [automation](docs/automation.md). Run `python3 scripts/pilot_isolation.py` when changing the isolation boundary, using Docker with the configured image; never fall back to executing an untrusted candidate on the host.

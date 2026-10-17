@@ -2,7 +2,7 @@
 
 The active project contract is `PROJECT.md`. It starts as a draft and grants no publication permissions until the owner accepts it. The files under `templates/` are reusable record formats, not competing project policy.
 
-1. For an uncertain product flow, follow discovery, disposable HTML exploration and re-grilling in [workflow](workflow.md).
+1. Choose additional reading through the [task routes](task-routing.md). For an uncertain product flow, follow [discovery](discovery.md), disposable HTML exploration and re-grilling.
 2. For established or non-interactive work, record the accepted decisions and choose the smallest relevant experiment. Do not rebuild an HTML prototype for a routine repair.
 3. Fill PROJECT.md with actual commands, owners and budgets. Record the [LikeC4 consideration](architecture.md) and verify the [support inventory](support-policy.md) before acceptance. Configure privacy restrictions before any agent session. Mark controls as manual, enforced-and-tested or pending.
 4. Deliver one bounded task with independent verification, then review what helped and what caused unnecessary friction.

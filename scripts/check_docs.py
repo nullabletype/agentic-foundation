@@ -12,7 +12,7 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED = (
     "README.md", "AGENTS.md", "CREDITS.md", "LICENSE", "VERSION", "CHANGELOG.md",
-    "docs/workflow.md", "docs/controls.md", "docs/adoption.md",
+    "docs/workflow.md", "docs/discovery.md", "docs/task-routing.md", "docs/controls.md", "docs/adoption.md",
     "docs/project-review.md", "docs/research.md",
     "docs/architecture.md", "docs/support-policy.md", "templates/adr.md",
     "templates/brief.md", "templates/project-contract.md",
