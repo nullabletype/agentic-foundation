@@ -19,6 +19,7 @@ for name in ('brief', 'project-contract', 'independent-review', 'handoff', 'adr'
     FILES.append((f'templates/{name}.md', f'templates/{name}.md'))
 for name in ('cases', 'calibration-inputs', 'answer-key'):
     FILES.append((f'examples/agent-evaluation/{name}.md', f'examples/agent-evaluation/{name}.md'))
+FILES.append(('examples/verification-boundaries.md', 'examples/verification-boundaries.md'))
 
 
 def adopt(destination, apply=False):

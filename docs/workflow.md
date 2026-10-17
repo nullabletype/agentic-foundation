@@ -30,6 +30,8 @@ Turn accepted scenarios into testable requirements. Choose the production platfo
 
 Complete the [project contract](../templates/project-contract.md). Name the canonical validation command, supported environments, artifact limits, publication authority, reviewer and correction/time budgets. A manual loop is the starting point; an unattended controller is a separate decision.
 
+For reviewable applications, record the synthetic generation/launch commands and representative scenarios. Launch explicitly against that dedicated data; if it is missing or invalid, stop and generate/validate it rather than falling back to a real/default workspace. Use production domain/store APIs where needed to preserve invariants, with fixed dates/seeds for repeatable semantics where useful; encrypted bytes need not be deterministic. Refuse destination collisions and keep generated data local within the configured limits. Human observation and screenshot-free checks remain the verification path. A sample workspace complements focused tests; it is not acceptance evidence on its own.
+
 **Exit:** material product and architecture questions are settled, commands are verified against source/help, and the human accepts the contract. Missing enforcement is explicitly marked pending.
 
 ## 5. Prepare sensible tasks
