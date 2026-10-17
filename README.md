@@ -10,7 +10,7 @@ This is a stack-neutral playbook and set of templates, informed by [dot-orbit an
 
 ## Start here
 
-1. Use the [discovery brief](templates/brief.md) to interrogate the problem and its assumptions. Matt Pocock's **grilling** skill is a useful optional companion to this “Grill-Me” stage.
+1. Follow [discovery](docs/discovery.md) and the [brief](templates/brief.md) to interrogate the problem and its assumptions. Matt Pocock's **grilling** skill is a useful optional companion to this “Grill-Me” stage.
 2. Build a disposable HTML prototype with synthetic data. Exercise the core flows with a human, record what failed, then refine and re-grill.
 3. Agree the requirements and consequential [architecture decisions](docs/architecture.md), recording ADRs where warranted and an explicit LikeC4 consideration. Configure the [project contract](templates/project-contract.md) with actual commands, permissions and limits.
 4. Break the work into [bounded tasks](.github/ISSUE_TEMPLATE/task.md). Run the [delivery loop](docs/workflow.md), with an independent agent verifying each implementation.
@@ -23,6 +23,8 @@ For material agent-guidance changes, the optional [behaviour evaluation](docs/ag
 For established behaviour, maintenance or non-interactive work, reuse accepted decisions and choose the smallest relevant experiment; the full HTML discovery sequence is for new or uncertain user flows.
 
 Start small: one brief, one project contract and one ready task. Add records only when they preserve a decision or evidence someone needs. [Adoption](docs/adoption.md) explains what to copy, configure and prove.
+
+During execution, use the [task routing table](docs/task-routing.md) to load relevant guidance. The delivery loop is separate from discovery; safety and authority controls apply throughout.
 
 ## Non-negotiable defaults
 

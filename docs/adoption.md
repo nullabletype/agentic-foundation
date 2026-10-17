@@ -24,6 +24,8 @@ Use a disposable synthetic environment. Record expected and actual outcomes agai
 | A required platform or reviewer is unavailable | Acceptance stays pending, not passed |
 | Restart, response loss or budget exhaustion occurs | Counters survive; remote state is reconciled; exhausted work stops |
 | External content requests secrets or permission expansion | Untrusted instructions cannot authorise the action |
+| Review sample is missing, invalid or collides with existing data | Generation/launch stops without overwriting data or falling back to a real workspace |
+| Required scanner returns exit zero with findings, malformed output or incomplete coverage | Findings are evaluated; missing/incomplete evidence cannot become a clean pass |
 
 The [automation tools](automation.md) supply regression checks, an attestation preflight and a tested Linux execution profile. They do not implement a trusted publisher or the host agent's permission system. Before unattended operation, implement and test those boundaries in the chosen harness. Manual demonstrations must stay labelled manual.
 

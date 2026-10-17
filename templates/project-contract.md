@@ -29,6 +29,25 @@ List exact commands verified against checked-in source or generated help.
 - Required hosted check names and live ruleset audit evidence:
 - Evidence record location (SHA, commands/results, run URLs, limitations):
 
+### Synthetic review workspace
+
+For applications with a reviewable user flow, configure these before launching a build for human review. Otherwise record not applicable with the reason. Follow the existing privacy and output budgets; no capture allowance is implied.
+
+- Synthetic data-generation and explicit review-launch commands, verified against source/help:
+- Dedicated destination, refusal of existing data/recovery-file collisions, and how the launch proves it selected synthetic data (no fallback to a personal/default workspace):
+- Scenario coverage (empty, failure/recovery, long/Unicode content and relevant date/order states); fixed clock/date/seed when useful:
+- Production domain/store APIs used to keep generated data invariant-valid, or why a simpler fixture is sufficient; validate before use:
+- Owned generated paths, byte/count limits, retention and cleanup reference; no generated database bytes committed:
+
+### Structured security checks
+
+Where supported by the ecosystem, record the agreed scanner/audit command, supported tool version, approved package/advisory sources and direct/transitive scope. Apply the [result-validation guidance](../docs/support-policy.md#validate-security-results); no generic scanner or runtime is installed by this contract.
+
+- Exact command/environment, expected report schema/version, candidate/lockfile identity and expected dependency/project coverage:
+- Failure conditions, applicable security policy and treatment of unavailable/incomplete reports:
+- Dated lifecycle/support recheck, deadline and update owner; missing automation or unsupported scan coverage explicitly pending/manual:
+- Sanitised outcome location; report generation/output limits and cleanup reference (no routine report upload):
+
 ## Authority and boundaries
 
 - Non-UI branch push and PR creation/update: enabled after local checks and independent verification **only when this contract is accepted**.

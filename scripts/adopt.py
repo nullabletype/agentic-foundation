@@ -12,13 +12,14 @@ FILES = [
     ('.github/ISSUE_TEMPLATE/task.md', '.github/ISSUE_TEMPLATE/task.md'),
     ('.github/pull_request_template.md', '.github/pull_request_template.md'),
 ]
-for name in ('workflow', 'controls', 'research', 'project-review', 'architecture', 'support-policy', 'agent-evaluation'):
+for name in ('workflow', 'discovery', 'task-routing', 'controls', 'research', 'project-review', 'architecture', 'support-policy', 'agent-evaluation'):
     FILES.append((f'docs/{name}.md', f'docs/{name}.md'))
 FILES.append(('docs/adopter-guide.md', 'docs/adoption.md'))
 for name in ('brief', 'project-contract', 'independent-review', 'handoff', 'adr', 'agent-evaluation'):
     FILES.append((f'templates/{name}.md', f'templates/{name}.md'))
 for name in ('cases', 'calibration-inputs', 'answer-key'):
     FILES.append((f'examples/agent-evaluation/{name}.md', f'examples/agent-evaluation/{name}.md'))
+FILES.append(('examples/verification-boundaries.md', 'examples/verification-boundaries.md'))
 
 
 def adopt(destination, apply=False):
