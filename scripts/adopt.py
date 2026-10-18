@@ -12,7 +12,7 @@ FILES = [
     ('.github/ISSUE_TEMPLATE/task.md', '.github/ISSUE_TEMPLATE/task.md'),
     ('.github/pull_request_template.md', '.github/pull_request_template.md'),
 ]
-for name in ('workflow', 'discovery', 'task-routing', 'controls', 'research', 'project-review', 'architecture', 'support-policy', 'agent-evaluation'):
+for name in ('workflow', 'discovery', 'task-routing', 'controls', 'research', 'project-review', 'architecture', 'support-policy', 'testing', 'agent-evaluation'):
     FILES.append((f'docs/{name}.md', f'docs/{name}.md'))
 FILES.append(('docs/adopter-guide.md', 'docs/adoption.md'))
 for name in ('brief', 'project-contract', 'independent-review', 'handoff', 'adr', 'agent-evaluation'):

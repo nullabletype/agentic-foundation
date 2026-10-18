@@ -5,7 +5,7 @@ Use this loop for an accepted, ready task. For uncertain product flows or prepar
 ## Execute one bounded loop
 
 1. Read the ready task, contract, relevant decisions and current checkout. Confirm the base against the remote. Use a fresh branch or suitable isolated worktree; preserve unrelated work.
-2. Restate the outcome and non-goals. Implement the smallest complete change and meaningful checks. Reproduce a defect before fixing it where practical.
+2. Restate the outcome and non-goals. Implement the smallest complete change and meaningful checks. Reproduce a defect before fixing it where practical. For consequential rules or conditional CI changes, use the applicable [testing guidance](testing.md).
 3. Run focused checks, then the agreed gate. Commit the intended candidate locally and verify that exact tree; record the SHA, commands, results and environment. Any subsequent change invalidates affected evidence.
 4. Give an independent agent the task, base and candidate SHA, diff and validation instructions. It inspects source, tests and failure cases, reproduces relevant checks and returns the [review record](../templates/independent-review.md). A different session of the same model can review; model diversity is optional. The implementer's summary alone is insufficient input.
 5. Address findings within the remaining budget. Re-run affected checks and request review of the corrected candidate. Classify infrastructure failure separately; a missing check stays pending.

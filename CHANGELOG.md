@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.0-draft.5 — 18 October 2026
+
+Unpublished follow-up; no new agent access, runtime or publication authority.
+
+- Project setup asks whether an optional owner-operated private-format inspection is needed; private-derived structural reports and synthetic reconstructions retain disclosure restrictions.
+- Architecture guidance adds focused checks of evaluated dependency boundaries where useful, separate from universal dependency support/security review.
+- Targeted mutation guidance requires a clean baseline and meaningful test failures; conditional CI selection needs positive/negative and workflow-integration tests when used.
+- Contract fields and synthetic boundary examples configure the choices. Adoption includes the testing guidance; no application stack, mutation runner or CI selector is installed.
+
 ## 0.2.0-draft.4 — 17 October 2026
 
 Unpublished follow-up; safety, authority and verification gates are unchanged.
