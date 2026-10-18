@@ -11,6 +11,8 @@ Then load the matching rows below. Routes are additive: a UI dependency change n
 | Explore a new or uncertain product flow | [Discovery stages 1–4](discovery.md), [brief](../templates/brief.md) |
 | Prepare/split tasks, triage scope or reassess dependencies | [Task preparation and readiness](discovery.md#5-prepare-sensible-tasks), [task template](../.github/ISSUE_TEMPLATE/task.md) |
 | Review implementation independently | [Review record](../templates/independent-review.md), task/specification and actual candidate diff |
+| Choose tests for consequential rules or change conditional CI selection | [Targeted mutation checks and selective CI](testing.md), affected acceptance criteria and workflow callers |
+| Set up owner-operated inspection of a private external format | Controls' [optional inspection boundary](controls.md#optional-owner-operated-private-data-inspection), contract's private-data setup decision |
 | Change architecture or accept architecture readiness | [Architecture/LikeC4 decision](architecture.md), relevant ADRs |
 | Select/update dependencies or tools; support review becomes due | [Support and security policy](support-policy.md), affected inventory and lockfiles |
 | Launch/review UI, interaction or accessibility changes | Controls' authority/privacy sections and the contract's synthetic launch/walkthrough configuration |
