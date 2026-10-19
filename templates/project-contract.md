@@ -29,6 +29,39 @@ List exact commands verified against checked-in source or generated help.
 - Required hosted check names and live ruleset audit evidence:
 - Evidence record location (SHA, commands/results, run URLs, limitations):
 
+Configure these where useful; universal dependency support/security review remains required:
+
+- [Architecture boundaries](../docs/architecture.md#check-useful-boundaries): consequential rules, evaluated graph/configurations, positive/negative checks and command, or source review sufficient with reason:
+- [Targeted mutation checks](../docs/testing.md#targeted-mutation-checks): selected critical rules/faults, baseline/detecting tests, command and scratch/time limits, or not selected:
+- [Selective CI](../docs/testing.md#selective-ci), if used: core/conditional acceptance matrix, selector and workflow-integration tests, unknown-scope handling, current-candidate evidence and live required-status audit; otherwise always-run:
+
+### Optional private-data inspection setup
+
+Ask at setup: does understanding an external format require owner-operated private-data inspection? Default disabled/not needed. A yes identifies proposed setup, not permission to inspect. Follow the [inspection boundary](../docs/controls.md#optional-owner-operated-private-data-inspection); keep private inputs and derived output out of agent context and development evidence.
+
+- Decision: disabled / not needed / proposed / owner-accepted; purpose and owner:
+- If needed: reviewed procedure/tool, isolated local environment/network/telemetry controls, dependency preparation, private storage/access, byte/time/cleanup limits and residual risks:
+- Human acceptance reference/date/revision, permitted sanitised outcome and independent synthetic reproduction path; no agent access to private files:
+
+### Synthetic review workspace
+
+For applications with a reviewable user flow, configure these before launching a build for human review. Otherwise record not applicable with the reason. Follow the existing privacy and output budgets; no capture allowance is implied.
+
+- Synthetic data-generation and explicit review-launch commands, verified against source/help:
+- Dedicated destination, refusal of existing data/recovery-file collisions, and how the launch proves it selected synthetic data (no fallback to a personal/default workspace):
+- Scenario coverage (empty, failure/recovery, long/Unicode content and relevant date/order states); fixed clock/date/seed when useful:
+- Production domain/store APIs used to keep generated data invariant-valid, or why a simpler fixture is sufficient; validate before use:
+- Owned generated paths, byte/count limits, retention and cleanup reference; no generated database bytes committed:
+
+### Structured security checks
+
+Where supported by the ecosystem, record the agreed scanner/audit command, supported tool version, approved package/advisory sources and direct/transitive scope. Apply the [result-validation guidance](../docs/support-policy.md#validate-security-results); no generic scanner or runtime is installed by this contract.
+
+- Exact command/environment, expected report schema/version, candidate/lockfile identity and expected dependency/project coverage:
+- Failure conditions, applicable security policy and treatment of unavailable/incomplete reports:
+- Dated lifecycle/support recheck, deadline and update owner; missing automation or unsupported scan coverage explicitly pending/manual:
+- Sanitised outcome location; report generation/output limits and cleanup reference (no routine report upload):
+
 ## Authority and boundaries
 
 - Non-UI branch push and PR creation/update: enabled after local checks and independent verification **only when this contract is accepted**.

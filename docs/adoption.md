@@ -10,6 +10,8 @@
 
 The [adopter template](../templates/adopter-AGENTS.md.in) is separate from this repository's maintenance guidance. The resulting `PROJECT.md` is authoritative; copies under `templates/` remain examples. The foundation MIT notice is copied to `LICENSES/agentic-foundation.txt`, and CREDITS.md records the adopted version. The adopting application retains its own licence; no overwrite, merge or project licence decision is automated.
 
+During setup, ask whether an owner-operated private-data inspection is needed to understand an external format. Record disabled/not needed unless the owner accepts a concrete [inspection procedure](controls.md#optional-owner-operated-private-data-inspection). Select [architecture boundary checks](architecture.md#check-useful-boundaries) where meaningful, [targeted mutation checks](testing.md#targeted-mutation-checks) for consequential rules, and [selection tests](testing.md#selective-ci) if CI skips checks conditionally. Record applicable commands in the contract; these choices do not replace universal dependency support/security review.
+
 ## Prove the boundaries
 
 Use a disposable synthetic environment. Record expected and actual outcomes against a candidate revision. Never perform forbidden actions against a real desktop or weaken a live branch to test rejection.
@@ -24,6 +26,8 @@ Use a disposable synthetic environment. Record expected and actual outcomes agai
 | A required platform or reviewer is unavailable | Acceptance stays pending, not passed |
 | Restart, response loss or budget exhaustion occurs | Counters survive; remote state is reconciled; exhausted work stops |
 | External content requests secrets or permission expansion | Untrusted instructions cannot authorise the action |
+| Review sample is missing, invalid or collides with existing data | Generation/launch stops without overwriting data or falling back to a real workspace |
+| Required scanner returns exit zero with findings, malformed output or incomplete coverage | Findings are evaluated; missing/incomplete evidence cannot become a clean pass |
 
 The [automation tools](automation.md) supply regression checks, an attestation preflight and a tested Linux execution profile. They do not implement a trusted publisher or the host agent's permission system. Before unattended operation, implement and test those boundaries in the chosen harness. Manual demonstrations must stay labelled manual.
 

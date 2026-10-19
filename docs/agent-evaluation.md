@@ -1,6 +1,6 @@
 # Optional agent-behaviour evaluation
 
-Use a small synthetic evaluation to learn whether a material change to agent guidance preserves useful decisions. This complements application tests, independent review and human acceptance; it grants no publication authority. Start with the manual case pack below. Do not introduce a runner or a new required check for every project.
+Use a small synthetic evaluation to learn whether a material change to agent guidance preserves useful decisions. This complements application tests, independent review and human acceptance; it grants no publication authority. Start with the manual case pack below. The separate optional [executable toolkit](https://github.com/nullabletype/agentic-foundation/tree/main/toolkits/agent-evaluation) supports coding exercises; adoption does not copy or enable it. Keep evaluation separate from mandatory application checks.
 
 ## When to reevaluate
 
@@ -18,9 +18,9 @@ The full repository contains the answer key, so telling a candidate not to read 
 
 For a guidance comparison, supply the exact versioned instructions in both runs, change only the intended input and keep candidate configuration, cases and grader fixed. Do not replace the instructions being evaluated with an operator's policy summary. Record hashes of the supplied material, not merely the repository that contains it. If model/configuration identity or inputs are unknown, report the exercise as a sanity check rather than a comparable baseline. Keep per-case first-pass/final counts and unmet criteria so a wrong grading decision can be investigated without retaining raw transcripts. Mark unexercised boundaries as not observed, rather than zero failures. Feedback-assisted success measures correction; use fresh held-out cases to check whether an improvement generalises.
 
-## Executable cases remain a separate decision
+## Optional executable cases
 
-No executable agent runner is supplied. Before adding one, configure and test an execution boundary without publication credentials, desktop access, unrelated private data or inherited host environment. Specify allowed tools/network, bounded process time/output/scratch, cleanup and restart accounting under the [controls](controls.md). Verify upstream support for any selected runtime. Worktrees separate writes; they do not sandbox a process. The foundation's isolated Python verifier does not sandbox a complete coding agent.
+The separate toolkit supplies a runner, generic case pack and scripted reference; product-specific cases remain in their product repositories. It does not supply a restricted real-agent launcher. Before running executable agent trials, configure and test an execution boundary without publication credentials, desktop access, unrelated private data or inherited host environment. Specify allowed tools/network, bounded process time/output/scratch, cleanup and restart accounting under the [controls](controls.md). Verify upstream support for any selected runtime. Worktrees separate writes; they do not sandbox a process. The foundation's isolated Python verifier does not sandbox a complete coding agent.
 
 For implementation cases, use disposable synthetic inputs, an allowed edit scope and meaningful failing/boundary checks. Keep expected solutions and trusted graders outside candidate-writable/readable inputs. Validate graders with known positive and negative cases before real agent trials; a scripted reference proves the harness, not agent quality. Preserve candidate and harness identities, exact source state and independent verdicts separately. Do not execute candidate code on the host as a fallback.
 

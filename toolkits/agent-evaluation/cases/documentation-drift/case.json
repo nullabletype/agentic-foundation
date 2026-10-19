@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "id": "documentation-drift",
+  "category": "documentation-drift",
+  "title": "Reconcile operator documentation with executable help",
+  "startingState": {
+    "description": "Synthetic operator documentation names a stale switch that disagrees with the executable help and example.",
+    "files": [
+      "toolkits/agent-evaluation/cases/documentation-drift/workspace/cli.mjs",
+      "toolkits/agent-evaluation/cases/documentation-drift/workspace/README.md",
+      "toolkits/agent-evaluation/cases/documentation-drift/workspace/docs.test.mjs"
+    ]
+  },
+  "allowedPaths": [
+    "toolkits/agent-evaluation/cases/documentation-drift/workspace/README.md"
+  ],
+  "prompt": "Reconcile the synthetic operator documentation in toolkits/agent-evaluation/cases/documentation-drift/workspace/README.md with the checked-in CLI source and generated --help output. The executable contract is authoritative. Correct the option name and example, retain the documented default path, run the focused check, and edit only README.md.",
+  "expectedObservableResult": [
+    "The documented switch and example match generated help.",
+    "The default output path remains documented.",
+    "Executable source is not changed to accommodate stale documentation."
+  ],
+  "checks": [
+    {
+      "id": "documentation-contract",
+      "type": "command",
+      "command": [
+        "node",
+        "--test",
+        "toolkits/agent-evaluation/cases/documentation-drift/workspace/docs.test.mjs"
+      ],
+      "points": 60
+    },
+    {
+      "id": "stale-switch-removed",
+      "type": "file-excludes",
+      "path": "toolkits/agent-evaluation/cases/documentation-drift/workspace/README.md",
+      "fragments": [
+        "--export"
+      ],
+      "points": 20
+    },
+    {
+      "id": "allowed-scope",
+      "type": "scope",
+      "points": 20
+    }
+  ],
+  "rubric": {
+    "totalPoints": 100,
+    "passPoints": 100
+  }
+}

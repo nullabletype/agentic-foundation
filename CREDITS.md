@@ -11,3 +11,5 @@ The upstream skills are [MIT licensed](https://github.com/mattpocock/skills/blob
 OpenAI's harness-engineering work and Anthropic's engineering reports on effective agents, long-running harnesses and evaluation informed the loop design. Specific claims and links are in [research](docs/research.md). These organisations and authors have not endorsed this foundation.
 
 The concrete privacy, storage, publication and scope rules come from the maintainer's experience with [dot-orbit](https://github.com/nullabletype/dot-orbit) and [dot-finance](https://github.com/nullabletype/dot-finance). The [project review](docs/project-review.md) records which source revisions were inspected and distinguishes observations from recommendations.
+
+The optional [agent evaluation toolkit](https://github.com/nullabletype/agentic-foundation/tree/main/toolkits/agent-evaluation) is extracted and adapted from dot-orbit commit `28a6c01`. Its [original MIT notice](https://github.com/nullabletype/agentic-foundation/blob/main/toolkits/agent-evaluation/LICENSE), copyright 2026 Steven Davies, is retained alongside the code.

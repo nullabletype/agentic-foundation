@@ -1,5 +1,36 @@
 # Changelog
 
+## 0.2.0-draft.6 — 19 October 2026
+
+- Extract the optional executable agent evaluation toolkit from dot-orbit, with four generic synthetic cases and budget-control adapters.
+- Select the target repository and project-owned case pack explicitly; fingerprint the external toolkit separately. Historical Orbit baselines remain with Orbit.
+- Keep toolkit tests separate from the Python gate and adoption; no real-agent launcher, scheduling or permissions are configured.
+
+## 0.2.0-draft.5 — 18 October 2026
+
+Unpublished follow-up; no new agent access, runtime or publication authority.
+
+- Project setup asks whether an optional owner-operated private-format inspection is needed; private-derived structural reports and synthetic reconstructions retain disclosure restrictions.
+- Architecture guidance adds focused checks of evaluated dependency boundaries where useful, separate from universal dependency support/security review.
+- Targeted mutation guidance requires a clean baseline and meaningful test failures; conditional CI selection needs positive/negative and workflow-integration tests when used.
+- Contract fields and synthetic boundary examples configure the choices. Adoption includes the testing guidance; no application stack, mutation runner or CI selector is installed.
+
+## 0.2.0-draft.4 — 17 October 2026
+
+Unpublished follow-up; safety, authority and verification gates are unchanged.
+
+- Task-type routing selects additional reading while entry instructions, the active contract and controls remain required at session start.
+- Discovery and task preparation move to a separate document; routine delivery/resumption reads the shorter workflow.
+- Both agent entry points and adoption include the shared routing/discovery documents. Unchanged material already in context can be reused; changes invalidate that reuse.
+
+## 0.2.0-draft.3 — 17 October 2026
+
+Unpublished follow-up; no runtime, evidence-schema or permission changes.
+
+- Project contracts name dedicated synthetic generation/launch commands, representative states and collision/missing-data rejection for reviewable applications.
+- Security-audit guidance validates report schema, findings, expected scope and completion rather than exit status alone; lifecycle support remains a separate check.
+- Synthetic worked examples show required launch/audit decisions without claiming runtime enforcement. Adoption copies the new example alongside the existing guidance.
+
 ## 0.2.0-draft.2 — 17 October 2026
 
 Unpublished draft; no evidence-schema or permission changes.

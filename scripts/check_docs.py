@@ -12,9 +12,9 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED = (
     "README.md", "AGENTS.md", "CREDITS.md", "LICENSE", "VERSION", "CHANGELOG.md",
-    "docs/workflow.md", "docs/controls.md", "docs/adoption.md",
+    "docs/workflow.md", "docs/discovery.md", "docs/task-routing.md", "docs/controls.md", "docs/adoption.md",
     "docs/project-review.md", "docs/research.md",
-    "docs/architecture.md", "docs/support-policy.md", "templates/adr.md",
+    "docs/architecture.md", "docs/support-policy.md", "docs/testing.md", "templates/adr.md",
     "templates/brief.md", "templates/project-contract.md",
     "templates/independent-review.md", "templates/handoff.md",
     ".github/ISSUE_TEMPLATE/task.md", ".github/pull_request_template.md",
@@ -24,6 +24,7 @@ REQUIRED = (
     "docs/agent-evaluation.md", "templates/agent-evaluation.md",
     "examples/agent-evaluation/cases.md", "examples/agent-evaluation/answer-key.md",
     "examples/agent-evaluation/calibration-inputs.md",
+    "examples/verification-boundaries.md",
 )
 IGNORED = {".git", ".agent-runs", "artifacts", "__pycache__", "node_modules"}
 LINK = re.compile(r"\[[^\]\n]+\]\(([^)\n]+)\)")

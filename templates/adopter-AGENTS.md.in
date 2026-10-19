@@ -12,4 +12,4 @@ Read [PROJECT.md](PROJECT.md) for the accepted scope, commands, budgets and auth
 - Human review of the actual local UI/UX result is required before branch push or PR creation/update. Verified non-UI publication follows the accepted contract. Merge, deploy and release need their separate authority.
 - Stop for material scope decisions or exhausted budgets. Use the [handoff](templates/handoff.md); restarting does not reset counters.
 
-For discovery, use the [brief](templates/brief.md). For independent verification, use the [review record](templates/independent-review.md) and an isolated environment without publication credentials or unrelated private data. Use exact commands from PROJECT.md; do not invent a check command from the foundation's tooling.
+Use the [task routing table](docs/task-routing.md) for additional reading. Discovery, evaluations and historical evidence are loaded only for their listed triggers. Independent execution still requires isolation without publication credentials or unrelated private data. Use exact commands from PROJECT.md; do not invent a check command from the foundation's tooling.
