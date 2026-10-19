@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.0-draft.6 — 19 October 2026
+
+- Extract the optional executable agent evaluation toolkit from dot-orbit, with four generic synthetic cases and budget-control adapters.
+- Select the target repository and project-owned case pack explicitly; fingerprint the external toolkit separately. Historical Orbit baselines remain with Orbit.
+- Keep toolkit tests separate from the Python gate and adoption; no real-agent launcher, scheduling or permissions are configured.
+
 ## 0.2.0-draft.5 — 18 October 2026
 
 Unpublished follow-up; no new agent access, runtime or publication authority.

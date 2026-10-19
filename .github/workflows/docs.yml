@@ -29,3 +29,23 @@ jobs:
         run: docker pull python:3.14.7-slim-trixie@sha256:51dafde81dbdb6ebde285137a295cf18a47ca95234fe388a343719cb97305b3d
       - name: Verify isolation and negative controls
         run: python3 scripts/pilot_isolation.py
+
+  evaluation-toolkit:
+    name: Optional evaluation toolkit checks
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24.21.0
+      - run: node --test toolkits/agent-evaluation/harness.test.mjs toolkits/agent-evaluation/budget-broker.test.mjs
+      - name: Check scripted reference (no model calls)
+        run: >-
+          node toolkits/agent-evaluation/run.mjs
+          --repo . --cases toolkits/agent-evaluation/cases
+          --candidate node --candidate-arg toolkits/agent-evaluation/reference-candidate.mjs
+          --candidate-identity scripted-reference --trials 2 --max-corrections 0
+          --results "${{ runner.temp }}/foundation-reference.json"

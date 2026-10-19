@@ -1,6 +1,6 @@
 # Agent guidance
 
-This repository maintains a stack-neutral development playbook and reusable templates. Keep it small enough to use on a real project. Do not introduce an application stack, autonomous controller or new mandatory ceremony without an agreed need.
+This repository maintains a stack-neutral development playbook and reusable templates. Keep it small enough to use on a real project. The executable evaluation toolkit is optional and maintained separately from adoption. Do not introduce an application stack, autonomous controller or new mandatory ceremony without an agreed need.
 
 ## Hard boundaries
 

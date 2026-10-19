@@ -6,7 +6,7 @@ A practical starting point for development with coding agents: discover the prob
 
 The aim is useful autonomy with a small number of clear human decisions. Agents can implement, test, correct and publish reviewed non-UI work. Humans own product scope, UI/UX acceptance and permission to merge or release.
 
-This is a stack-neutral playbook and set of templates, informed by [dot-orbit and dot-finance](docs/project-review.md). It is not an autonomous runner. Copying these files does not configure tool permissions, GitHub rulesets or an independent reviewer.
+This is a stack-neutral playbook and set of templates, informed by [dot-orbit and dot-finance](docs/project-review.md). The playbook does not schedule autonomous work. Copying these files does not configure tool permissions, GitHub rulesets or an independent reviewer.
 
 ## Start here
 
@@ -18,7 +18,7 @@ This is a stack-neutral playbook and set of templates, informed by [dot-orbit an
 
 Use the [adoption command and verification tools](docs/automation.md) to preview a safe copy, run regression checks and test a bounded Linux verifier. The [completed example](examples/project-contract.md) and [pilot record](examples/pilot.md) show concrete limits and their evidence.
 
-For material agent-guidance changes, the optional [behaviour evaluation](docs/agent-evaluation.md) provides synthetic decision cases and independent grading without adding a runner or changing permissions.
+For material agent-guidance changes, start with the optional [manual behaviour evaluation](docs/agent-evaluation.md). The separate [executable evaluation toolkit](toolkits/agent-evaluation/README.md) runs synthetic coding exercises, supports project-owned case packs, and records checks, corrections and optional review. Use its scripted quick start before configuring a restricted real-agent launcher; adoption does not copy or enable the toolkit.
 
 For established behaviour, maintenance or non-interactive work, reuse accepted decisions and choose the smallest relevant experiment; the full HTML discovery sequence is for new or uncertain user flows.
 
