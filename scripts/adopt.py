@@ -15,7 +15,7 @@ FILES = [
 for name in ('workflow', 'discovery', 'task-routing', 'controls', 'research', 'project-review', 'architecture', 'support-policy', 'testing', 'agent-evaluation'):
     FILES.append((f'docs/{name}.md', f'docs/{name}.md'))
 FILES.append(('docs/adopter-guide.md', 'docs/adoption.md'))
-for name in ('brief', 'project-contract', 'independent-review', 'handoff', 'adr', 'agent-evaluation'):
+for name in ('brief', 'ui-contract', 'project-contract', 'independent-review', 'handoff', 'adr', 'agent-evaluation'):
     FILES.append((f'templates/{name}.md', f'templates/{name}.md'))
 for name in ('cases', 'calibration-inputs', 'answer-key'):
     FILES.append((f'examples/agent-evaluation/{name}.md', f'examples/agent-evaluation/{name}.md'))

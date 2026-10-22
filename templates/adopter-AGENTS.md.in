@@ -9,6 +9,7 @@ Read [PROJECT.md](PROJECT.md) for the accepted scope, commands, budgets and auth
 - Before staging or publishing, inspect all intended files and outgoing history for secrets, private personal data and local-only output. Resolve findings without echoing sensitive values; follow the pre-publication privacy check in [controls](docs/controls.md).
 - Generated outputs follow the configured paths and limits. Routine artifact uploads are disabled.
 - For implementation or resumption, follow [workflow](docs/workflow.md), the accepted task and its verification commands. Obtain verification from a different agent; missing review stays pending.
+- For UI implementation, read the accepted UI contract named in PROJECT.md. Reuse its semantic resources and shared patterns before local styling; update the contract with any genuinely new reusable pattern in the same candidate.
 - Human review of the actual local UI/UX result is required before branch push or PR creation/update. Verified non-UI publication follows the accepted contract. Merge, deploy and release need their separate authority.
 - Stop for material scope decisions or exhausted budgets. Use the [handoff](templates/handoff.md); restarting does not reset counters.
 

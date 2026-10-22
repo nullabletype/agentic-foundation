@@ -1,6 +1,6 @@
 # Agentic Foundation
 
-**Draft 0.2** — current version: [VERSION](VERSION). Publication preflight fixes following draft 0.1; real-project validation remains pending. See [changes and versioning](CHANGELOG.md).
+**Draft 0.2** — current version: [VERSION](VERSION). Iterative workflow, verification and production UI guidance following draft 0.1; real-project validation remains pending. See [changes and versioning](CHANGELOG.md).
 
 A practical starting point for development with coding agents: discover the problem, test the flow, agree the architecture, then deliver through a bounded implementation and verification loop.
 
@@ -12,7 +12,7 @@ This is a stack-neutral playbook and set of templates, informed by [dot-orbit an
 
 1. Follow [discovery](docs/discovery.md) and the [brief](templates/brief.md) to interrogate the problem and its assumptions. Matt Pocock's **grilling** skill is a useful optional companion to this “Grill-Me” stage.
 2. Build a disposable HTML prototype with synthetic data. Exercise the core flows with a human, record what failed, then refine and re-grill.
-3. Agree the requirements and consequential [architecture decisions](docs/architecture.md), recording ADRs where warranted and an explicit LikeC4 consideration. Configure the [project contract](templates/project-contract.md) with actual commands, permissions and limits.
+3. Agree the requirements, a lightweight [UI style and interaction contract](templates/ui-contract.md) when the product has UI work, and consequential [architecture decisions](docs/architecture.md), recording ADRs where warranted and an explicit LikeC4 consideration. Configure the [project contract](templates/project-contract.md) with actual commands, permissions and limits.
 4. Break the work into [bounded tasks](.github/ISSUE_TEMPLATE/task.md). Run the [delivery loop](docs/workflow.md), with an independent agent verifying each implementation.
 5. Apply the [controls](docs/controls.md) at the tool and repository boundaries before enabling unattended execution.
 

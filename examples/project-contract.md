@@ -5,6 +5,7 @@
 - Outcome: install self-contained guidance without overwriting existing work; verify candidate evidence and isolation through small repeatable tools.
 - Non-goals: application framework, agent scheduler, automated publisher, merge/release, desktop access or OS permission changes.
 - Product and policy owner: repository owner. Human approval of a UI/UX candidate would be required; this slice has no product UI change.
+- UI style and interaction contract: not applicable to this documentation and command-line automation pilot. Reconsider if the foundation gains a rendered product surface.
 - Architecture/LikeC4 consideration: not needed for this bounded Python tooling pilot; the scripts have no service topology requiring a diagram. Reconsider when external integrations or a multi-component runner are introduced. Proposed by the implementing agent on 27 September 2026; owner acceptance remains pending for real adoption.
 - Support policy: [supported dependencies only](../docs/support-policy.md). This historical pilot records tested versions, not a completed lifecycle inventory; live support evidence for every selected tool remains required before accepting a real project contract.
 - Work record: this bounded task and [pilot results](pilot.md).

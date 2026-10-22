@@ -16,6 +16,8 @@ These defaults apply to adopted projects. The project contract supplies concrete
 
 UI/UX includes styling, layout, user-facing wording, navigation, interaction, focus, keyboard behaviour and accessibility semantics. Classify by effect, not file extension: a backend change can alter a user flow. Uncertain classification goes to human review. Prepare a runnable result, walkthrough and synthetic scenarios before requesting approval. Record reviewer, date, candidate SHA, reviewed flows and unresolved findings. Approval is scoped to the reviewed result and is invalidated by relevant changes.
 
+For a product with UI work, accept a lightweight [UI style and interaction contract](../templates/ui-contract.md) before the first production UI slice. It identifies the semantic resources and shared patterns feature code reuses. A new reusable pattern updates that contract and its production implementation in the same candidate; a deliberate one-off variation records why reuse was unsuitable. The contract supports consistency but never replaces human review of the actual UI/UX candidate.
+
 Publication means branch push as well as PR creation/update. Do not use a draft PR to evade the pre-publication UI gate. Automated tests and an independent agent support human review; neither certifies visual quality. Public documentation prose alone is not an application UI change; a rendered site redesign is.
 
 ## Privacy and visual verification

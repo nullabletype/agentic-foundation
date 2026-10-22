@@ -25,8 +25,11 @@ class AdoptionTests(unittest.TestCase):
         self.assertIn((ROOT / 'VERSION').read_text().strip(), (self.root / 'CREDITS.md').read_text())
         agent = (self.root / 'AGENTS.md').read_text()
         self.assertIn('[PROJECT.md](PROJECT.md)', agent)
+        self.assertIn('accepted UI contract', agent)
         self.assertNotIn('scripts/check_docs.py', agent)
         self.assertIn('draft', (self.root / 'PROJECT.md').read_text())
+        self.assertEqual((ROOT / 'templates/ui-contract.md').read_text(),
+                         (self.root / 'templates/ui-contract.md').read_text())
         # Foundation-only required files do not apply to the adopted project.
         errors = [e for e in check(self.root)[1] if not e.startswith('missing required file:')]
         self.assertEqual([], errors)

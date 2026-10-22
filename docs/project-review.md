@@ -51,3 +51,11 @@ These are recommendations, not changes delivered by this repository:
 4. Review active budgets, stale planning sections and live enforcement status at the next milestone.
 
 Do not introduce a new controller, board taxonomy or policy framework merely to apply these small corrections.
+
+## Follow-up: turn accepted UI direction into a production contract
+
+Follow-up review on **6 October 2026** found a reusable lesson from the projects' subsequent UI work. Orbit now separates its product-level UI specification from a detailed desktop style guide backed by semantic tokens, shared component recipes, a component-state matrix and a synthetic reference window. New screens are directed to reuse those production resources before adding a recipe. Finance's accepted prototype record captures concrete corrections to typography, icons, alignment, overflow, truncation and unavailable actions; those decisions are valuable production input even though prototype code remains disposable.
+
+The foundation therefore adds a conditional UI style and interaction contract after prototype acceptance and before the first production UI slice. It is not a brand exercise or a mandatory artifact for non-UI work. It records the visual, interaction, content, accessibility and responsive decisions agents must preserve; points to the production semantic resources that implement them; and makes a new reusable pattern an explicit human-reviewed contract change. Per-candidate human UI/UX review remains required.
+
+Evidence: Orbit's [`style-guide.md`](https://github.com/nullabletype/dot-orbit/blob/b565fdc29c7ca9c8b3e025558bba1d447dffaead/docs/design/style-guide.md) and [`ui-specification.md`](https://github.com/nullabletype/dot-orbit/blob/b565fdc29c7ca9c8b3e025558bba1d447dffaead/docs/design/ui-specification.md); Finance's [`guided-reconciliation-trial.md`](https://github.com/nullabletype/dot-finance/blob/e8f2265a34fa0027ed4666414e01a452c0a2fc16/docs/development/guided-reconciliation-trial.md). This follow-up inspected the documents and implementation shape; it did not rerun either application's validation or certify current visual quality.

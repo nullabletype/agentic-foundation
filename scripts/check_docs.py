@@ -15,7 +15,7 @@ REQUIRED = (
     "docs/workflow.md", "docs/discovery.md", "docs/task-routing.md", "docs/controls.md", "docs/adoption.md",
     "docs/project-review.md", "docs/research.md",
     "docs/architecture.md", "docs/support-policy.md", "docs/testing.md", "templates/adr.md",
-    "templates/brief.md", "templates/project-contract.md",
+    "templates/brief.md", "templates/ui-contract.md", "templates/project-contract.md",
     "templates/independent-review.md", "templates/handoff.md",
     ".github/ISSUE_TEMPLATE/task.md", ".github/pull_request_template.md",
     "docs/automation.md", "docs/adopter-guide.md", "templates/adopter-AGENTS.md.in",

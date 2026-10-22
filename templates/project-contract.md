@@ -7,6 +7,8 @@ This file configures the [workflow](../docs/workflow.md) and [controls](../docs/
 ## Product and ownership
 
 - Product/spec and accepted scope:
+- UI style and interaction contract: accepted path and revision / not applicable; UI/UX owner and next review:
+- UI implementation rule: each candidate names the accepted semantic resources and shared patterns it reuses; a genuinely new reusable pattern updates the UI contract and production implementation in that same candidate.
 - Domain and architecture decisions (see [architecture guidance](../docs/architecture.md)):
 - LikeC4 decision: adopt / defer / not needed; rationale, decision date/owner and revisit trigger (required before acceptance):
 - Owner for product, UI/UX, policy and budget decisions:
@@ -22,12 +24,14 @@ List exact commands verified against checked-in source or generated help.
 | Canonical gate | To configure | To configure | Every candidate |
 | Focused tests | To configure | To configure | Affected behaviour |
 | Native/browser smoke without capture | To configure | To configure | Affected flows |
+| UI-contract conformance checks | To configure / manual-only | To configure | UI implementation changes |
 | Human UI/UX walkthrough | Steps to configure | Local synthetic build | Any UI/UX impact |
 
 - Dependency/runtime pins, lockfiles and update owner:
 - [Support inventory](../docs/support-policy.md): exact versions, upstream evidence, checked date, end-of-support dates/recheck dates and migration owner; no unsupported components:
 - Required hosted check names and live ruleset audit evidence:
 - Evidence record location (SHA, commands/results, run URLs, limitations):
+- Optional synthetic UI reference surface command and supported themes/sizes, or not used:
 
 Configure these where useful; universal dependency support/security review remains required:
 

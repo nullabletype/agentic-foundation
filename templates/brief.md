@@ -29,7 +29,9 @@ Describe concrete inputs, actions and expected outcomes. Include failure/recover
 - What changed after observation?
 - Which uncertainties remain material?
 - Accepted requirements and acceptance scenarios:
+- Accepted visual language, interaction states, content conventions, accessibility behaviour and responsive boundaries to transfer to production:
+- Prototype styling or implementation deliberately not carried forward:
 - Production decisions needed next, alternatives and constraints:
 - Human acceptance of the revised scope, date and revision:
 
-Do not select a production stack merely because the HTML experiment used it. Transfer validated requirements and flows; production code requires its own design and verification.
+Do not select a production stack merely because the HTML experiment used it. Transfer validated requirements, flows and accepted UI decisions through the production [UI contract](ui-contract.md); production code requires its own design and verification.

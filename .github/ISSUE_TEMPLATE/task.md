@@ -22,6 +22,7 @@ Who benefits, and what observable behaviour changes?
 - Exact automated commands and required environments:
 - Independent verification scope:
 - UI/UX impact: yes / no / uncertain, with reason:
+- If yes or uncertain: accepted UI-contract pattern being reused, or proposed new pattern and contract update:
 - If yes or uncertain: local human walkthrough and approval required **before branch push or PR creation/update**.
 - Generation/storage changes and configured limits, or none:
 - Contract and remaining correction/time budget:
