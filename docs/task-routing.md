@@ -15,7 +15,8 @@ Then load the matching rows below. Routes are additive: a UI dependency change n
 | Set up owner-operated inspection of a private external format | Controls' [optional inspection boundary](controls.md#optional-owner-operated-private-data-inspection), contract's private-data setup decision |
 | Change architecture or accept architecture readiness | [Architecture/LikeC4 decision](architecture.md), relevant ADRs |
 | Select/update dependencies or tools; support review becomes due | [Support and security policy](support-policy.md), affected inventory and lockfiles |
-| Launch/review UI, interaction or accessibility changes | Controls' authority/privacy sections and the contract's synthetic launch/walkthrough configuration |
+| Draft or accept a production UI direction | [Discovery stages 3–4](discovery.md), [UI contract template](../templates/ui-contract.md) and the product specification/prototype decision |
+| Implement, launch or review UI, interaction or accessibility changes | The accepted project UI contract, Controls' authority/privacy sections and the contract's synthetic launch/walkthrough configuration |
 | Stage, push or create/update a PR | Controls' pre-publication privacy check, [publication steps](workflow.md), exact candidate evidence |
 | Change generation, storage, isolation or permissions | Controls' affected boundary, configured limits and rejection evidence |
 | Materially change agent guidance, templates, models or orchestration | [Evaluation procedure](agent-evaluation.md) to decide affected cases or record why reevaluation is unnecessary; keep keys out of candidate/calibration inputs |

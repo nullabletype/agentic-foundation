@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.0-draft.7 — 22 October 2026
+
+Unpublished follow-up informed by subsequent dot-orbit and dot-finance UI work; no new runtime or publication authority.
+
+- Add a conditional UI style and interaction contract between prototype acceptance and the first production UI slice.
+- Require UI tasks and independent reviews to name reused shared patterns or a human-reviewed contract update for a genuinely new pattern.
+- Extend adoption with the self-contained template while keeping it not applicable to non-UI projects and keeping reference surfaces optional.
+- Record the later source-project lesson without changing the per-candidate human UI/UX publication gate.
+
 ## 0.2.0-draft.6 — 19 October 2026
 
 - Extract the optional executable agent evaluation toolkit from dot-orbit, with four generic synthetic cases and budget-control adapters.

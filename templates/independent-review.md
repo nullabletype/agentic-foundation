@@ -18,7 +18,7 @@ Map criteria to observed evidence when they need separate proof. Include failed,
 
 ## Findings
 
-Inspect the actual implementation and test behaviour. Try an important boundary/failure case; consider whether a plausible defect would escape the tests. Check the pre-publication privacy sweep and inspect intended files/outgoing history for overlooked sensitive content. Check scope, data exposure, implicit screenshotting, generated output and UI/UX classification. Verify commands against source/help. For architecture changes, check relevant ADRs and diagram consistency, and require the recorded LikeC4 consideration. For dependency/toolchain changes, verify current upstream support evidence against the selected versions; unsupported or unknown status blocks acceptance. Review the relevant controls rather than adding a new universal checklist.
+Inspect the actual implementation and test behaviour. Try an important boundary/failure case; consider whether a plausible defect would escape the tests. Check the pre-publication privacy sweep and inspect intended files/outgoing history for overlooked sensitive content. Check scope, data exposure, implicit screenshotting, generated output and UI/UX classification. For UI work, compare the candidate with the accepted UI contract: identify reused production patterns, duplicated literal styling, one-off interaction states, divergence from shared components and undocumented new patterns. Verify commands against source/help. For architecture changes, check relevant ADRs and diagram consistency, and require the recorded LikeC4 consideration. For dependency/toolchain changes, verify current upstream support evidence against the selected versions; unsupported or unknown status blocks acceptance. Review the relevant controls rather than adding a new universal checklist.
 
 For each actionable finding: severity, file/line, concrete failure, evidence and required correction. Distinguish blockers from suggestions. A clean review should still state what was inspected and what could not be verified.
 
@@ -27,6 +27,7 @@ For each actionable finding: severity, file/line, concrete failure, evidence and
 Accept / changes required / blocked.
 
 - Acceptance criteria with evidence or explicit gaps:
+- UI-contract conformance or not applicable; new patterns and human decisions still required:
 - Human UI/UX review: required / not required, with reason; approval belongs to the human:
 - Residual risks and unavailable checks:
 - Re-review scope after corrections:

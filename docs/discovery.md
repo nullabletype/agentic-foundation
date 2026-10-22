@@ -24,19 +24,21 @@ Revisit the brief using what people actually did. Resolve the assumptions the ex
 
 **Exit:** the owner accepts the flow and revised scope, or chooses to stop. An accepted HTML flow is not approval of an unseen native implementation.
 
-## 4. Agree requirements and architecture
+## 4. Agree requirements, UI contract and architecture
 
 Turn accepted scenarios into testable requirements. Choose the production platform only now, against deployment, privacy, accessibility, maintenance and support constraints. Record consequential decisions with context, alternatives, decision and consequences; a short [ADR](architecture.md) is enough. Record a LikeC4 adopt/defer/not-needed decision with rationale before architecture readiness. Apply the [support policy](support-policy.md): unsupported components are prohibited, and unknown support must be resolved before selection.
+
+For a product with UI work, accept a small [UI style and interaction contract](../templates/ui-contract.md) before the first production UI slice. Transfer the prototype's accepted visual language, interaction states, content conventions, accessibility behaviour and responsive boundaries without treating prototype implementation as production source. Name the production semantic resources and shared patterns agents must reuse. A non-UI project records the contract as not applicable.
 
 Complete the [project contract](../templates/project-contract.md). Name the canonical validation command, supported environments, artifact limits, publication authority, reviewer and correction/time budgets. A manual loop is the starting point; an unattended controller is a separate decision.
 
 For reviewable applications, record the synthetic generation/launch commands and representative scenarios. Launch explicitly against that dedicated data; if it is missing or invalid, stop and generate/validate it rather than falling back to a real/default workspace. Use production domain/store APIs where needed to preserve invariants, with fixed dates/seeds for repeatable semantics where useful; encrypted bytes need not be deterministic. Refuse destination collisions and keep generated data local within the configured limits. Human observation and screenshot-free checks remain the verification path. A sample workspace complements focused tests; it is not acceptance evidence on its own.
 
-**Exit:** material product and architecture questions are settled, commands are verified against source/help, and the human accepts the contract. Missing enforcement is explicitly marked pending.
+**Exit:** material product, UI and architecture questions are settled, commands are verified against source/help, and the human accepts the applicable contracts. Missing enforcement is explicitly marked pending.
 
 ## 5. Prepare sensible tasks
 
-Use the [task template](../.github/ISSUE_TEMPLATE/task.md). Prefer end-to-end slices that leave the project runnable. Include acceptance scenarios, non-goals, dependencies, validation and UI/UX impact. Keep one authoritative work queue; a local checkpoint is not a second backlog.
+Use the [task template](../.github/ISSUE_TEMPLATE/task.md). Prefer end-to-end slices that leave the project runnable. Include acceptance scenarios, non-goals, dependencies, validation and UI/UX impact. A UI task names the accepted pattern it reuses or the new pattern and contract change it proposes. Keep one authoritative work queue; a local checkpoint is not a second backlog.
 
 Split tasks when they require different decisions or rollback boundaries. Combine small changes when they share acceptance criteria and validation. Avoid both giant autonomous assignments and a separate ticket for every mechanical edit.
 
