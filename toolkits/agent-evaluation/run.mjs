@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import { resolve } from "node:path";
+import { realpathSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { runEvaluation } from "./harness.mjs";
 
@@ -71,7 +72,16 @@ async function main() {
   if (!result.aggregate.passed) process.exitCode = 1;
 }
 
-if (process.argv[1] === fileURLToPath(import.meta.url)) {
+function isDirectInvocation(argumentPath, moduleUrl) {
+  if (!argumentPath) return false;
+  try {
+    return realpathSync(argumentPath) === realpathSync(fileURLToPath(moduleUrl));
+  } catch {
+    return false;
+  }
+}
+
+if (isDirectInvocation(process.argv[1], import.meta.url)) {
   main().catch((error) => {
     console.error(`agent-evaluation: result=failed reason=${error.message}`);
     process.exitCode = 1;

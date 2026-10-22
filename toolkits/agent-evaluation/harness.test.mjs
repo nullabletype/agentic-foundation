@@ -12,6 +12,17 @@ import { evaluateChecks, runEvaluation, runProcess, summarize, validateCase, ver
 delete process.env.NODE_TEST_CONTEXT;
 const exec = promisify(execFile);
 
+test("run.mjs can be imported without invoking the CLI", async () => {
+  const runUrl = new URL("./run.mjs", import.meta.url).href;
+  const imported = await exec(process.execPath, [
+    "--input-type=module",
+    "--eval",
+    `await import(${JSON.stringify(runUrl)});`,
+  ]);
+  assert.equal(imported.stdout, "");
+  assert.equal(imported.stderr, "");
+});
+
 test("excessive discarded output terminates the candidate and invalidates execution", async () => {
   const result = await runProcess(process.execPath, ["-e", "setInterval(()=>process.stdout.write('x'.repeat(65536)),1)"], {
     maximumOutputBytes: 1024, timeoutMilliseconds: 5000,
