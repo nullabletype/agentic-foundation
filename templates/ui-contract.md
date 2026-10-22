@@ -12,7 +12,7 @@ The product specification remains authoritative for flows, information architect
 - UI/UX owner, acceptance date and revision:
 - Supported themes, window/viewport boundaries, input methods and accessibility expectations:
 - Authoritative production tokens, styles, components or equivalent implementation sources:
-- Optional synthetic reference surface and launch command:
+- Optional synthetic reference surface purpose, coverage and production source; configure its launch command in PROJECT.md:
 - Explicitly deferred visual or responsive directions:
 
 ## Principles and language
